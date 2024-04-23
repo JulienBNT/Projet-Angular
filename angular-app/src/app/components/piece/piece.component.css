@@ -1,0 +1,17 @@
+.status-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.status-green {
+    background-color: green;
+}
+
+.status-red {
+    background-color: red;
+}
+
+.status-blue {
+    background-color: blue;
+}
