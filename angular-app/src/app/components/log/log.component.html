@@ -1,4 +1,4 @@
-<div class="modal" tabindex="-1">
+<div class="modal" tabindex="-1" *ngIf="showModal">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -7,6 +7,7 @@
         </div>
         <div class="modal-body">
           <p>Votre problème a bien été signalé</p>
+          <span (click)="close()" class="close">&times;</span>
         </div>
       </div>
     </div>
