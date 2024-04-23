@@ -12,19 +12,17 @@
                 </tr>
             </thead>
             <tbody>
-
-                
-                @for (piece of pieces; track piece){
-                <tr>
-                    <td>{{piece.status}}</td>
+                <tr *ngFor="let piece of pieces">
+                    <td>
+                        <div class="status-circle" [class.status-green]="piece.status === true"
+                            [class.status-red]="piece.status === false" [class.status-blue]="piece.status === null">
+                        </div>
+                    </td>
                     <td class="text-center">{{piece.name}}</td>
                     <td class="text-right">
-                        <button class="btn btn-primary w-100">Forçage</button>
+                        <button class="btn btn-primary w-100" (click)="toggleStatus(piece)">Forçage</button>
                     </td>
                 </tr>
-                }
-
-
             </tbody>
         </table>
     </div>
