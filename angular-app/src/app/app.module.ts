@@ -9,7 +9,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TimerComponent } from './components/timer/timer.component';
 import { PieceComponent } from './components/piece/piece.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
