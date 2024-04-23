@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center">Liste des pièces</h1>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Status</th>
+                    <th class="text-center">Nom</th>
+                    <th class="text-right">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                
+                @for (piece of pieces; track piece){
+                <tr>
+                    <td>{{piece.status}}</td>
+                    <td class="text-center">{{piece.name}}</td>
+                    <td class="text-right">
+                        <button class="btn btn-primary w-100">Forçage</button>
+                    </td>
+                </tr>
+                }
+
+
+            </tbody>
+        </table>
+    </div>
+</div>
