@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center">Liste des pièces</h1>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Status</th>
+                    <th class="text-center">Nom</th>
+                    <th class="text-right">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let piece of pieces">
+                    <td>
+                        <div class="status-circle" [class.status-green]="piece.status === true"
+                            [class.status-red]="piece.status === false" [class.status-blue]="piece.status === null">
+                        </div>
+                    </td>
+                    <td class="text-center">{{piece.name}}</td>
+                    <td class="text-right">
+                        <button class="btn btn-primary w-100" (click)="toggleStatus(piece)">Forçage</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

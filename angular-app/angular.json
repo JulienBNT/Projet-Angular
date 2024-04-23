@@ -95,7 +95,6 @@
               "src/assets"
             ],
             "styles": [
-              "npm_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.css"
             ],
             "scripts": []
