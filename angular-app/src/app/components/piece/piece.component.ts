@@ -8,6 +8,7 @@ interface Piece {
 @Component({
     selector: "app-piece",
     templateUrl: "./piece.component.html",
+    styleUrls: ["./piece.component.css"]
 })
 
 export class PieceComponent {
@@ -19,12 +20,8 @@ export class PieceComponent {
         { name: "Buanderie", status: false },
         { name: "Piscine", status: false }
     ];
-    piece: Piece = {
-        name: "",
-        status: false
-    };
-    addPiece(){
-        this.pieces.push(this.piece);
-        this.piece = { name: "", status: false };
+
+    toggleStatus(piece: Piece) {
+        piece.status = !piece.status;
     }
 }
