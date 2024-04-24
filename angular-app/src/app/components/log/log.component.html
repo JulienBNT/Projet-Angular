@@ -1,14 +1,17 @@
-<div class="modal" tabindex="-1" *ngIf="showModal">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Signalement de problème</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <p>Votre problème a bien été signalé</p>
-          <span (click)="close()" class="close">&times;</span>
-        </div>
-      </div>
-    </div>
-  </div>
+<h1>Logs</h1>
+<table class="table scrollable-table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Pièce</th>
+      <th scope="col">Statut</th>
+      <th scope="col">Heure</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let log of logService.logs">
+      <td>{{ log.piece }}</td>
+      <td>{{ log.status ? 'Allumé' : 'Éteint' }}</td>
+      <td>{{ log.time | date:'short' }}</td>
+    </tr>
+  </tbody>
+</table>
