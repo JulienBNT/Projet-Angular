@@ -22,11 +22,9 @@ export class PieceComponent {
         { name: "Piscine", status: true }
     ];
 
-    constructor(private logService: LogService) {}
-
     date: Date = new Date();
 
-    constructor() {
+    constructor(private logService: LogService) {
         this.startTimer();
     }
 
