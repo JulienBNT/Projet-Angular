@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { LogService } from '../../services/log/log.service';
 
 interface Piece {
     name: string;
@@ -21,7 +22,11 @@ export class PieceComponent {
         { name: "Piscine", status: false }
     ];
 
+    constructor(private logService: LogService) {}
+
     toggleStatus(piece: Piece) {
         piece.status = !piece.status;
+        this.logService.log(piece.name, piece.status);
+
     }
 }
