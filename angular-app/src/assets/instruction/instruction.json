@@ -1,0 +1,17 @@
+[
+  {
+    "piece": "SDB",
+    "action": "éteindre",
+    "date": "2024-04-24T15:29"
+  },
+  {
+    "piece": "Garage",
+    "action": "allumer",
+    "date": "2024-04-24T15:33"
+  },
+  {
+    "piece": "PAC",
+    "action": "allumer",
+    "date": "2024-04-24T15:35"
+  }
+]
