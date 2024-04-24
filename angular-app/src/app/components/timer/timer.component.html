@@ -1,4 +1,5 @@
 <div class="container text-center">
-    <p>{{ date | date:'HH:mm' }}</p>
+    <p>{{ timerService.date | date:'HH:mm' }}</p>
     <button class="btn btn-outline-success btn-primary" style="color: white;" (click)="incrementMinutes(30)">+30min</button>
+    <button class="btn btn-outline-danger btn-primary" style="color: white;" (click)="incrementMinutes(1)">1min</button>
 </div>

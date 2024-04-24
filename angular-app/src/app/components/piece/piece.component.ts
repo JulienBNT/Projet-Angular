@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { LogService } from '../../services/log/log.service';
+import { TimerService } from '../../services/timer/timer.service';
 
 interface Piece {
     name: string;
@@ -24,13 +25,13 @@ export class PieceComponent {
 
     date: Date = new Date();
 
-    constructor(private logService: LogService) {
+    constructor(private logService: LogService, private timerService: TimerService) {
         this.startTimer();
     }
-
+    
     startTimer() {
         setInterval(() => {
-            this.date = new Date(); 
+            this.date = this.timerService.date; 
             const hour = this.date.getHours();
             const minutes = this.date.getMinutes();
 

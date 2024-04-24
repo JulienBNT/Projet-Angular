@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { TimerService } from '../timer/timer.service';
 
 interface Log {
   piece: string;
@@ -12,7 +13,10 @@ interface Log {
 export class LogService {
   logs: Log[] = [];
 
+  constructor(private timerService: TimerService) {
+  }
+
   log(piece: string, status: boolean) {
-    this.logs.push({ piece, status, time: new Date() });
+    this.logs.push({ piece, status, time: this.timerService.date });
   }
 }
