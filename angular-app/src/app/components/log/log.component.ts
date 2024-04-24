@@ -1,16 +1,10 @@
-import { Component, OnInit } from "@angular/core";
-import { ProblemeService } from "../../services/probleme/probleme.service";
+import { Component } from '@angular/core';
+import { LogService } from '../../services/log/log.service';
 
 @Component({
-  selector: "app-log",
-  templateUrl: "./log.component.html",
+  selector: 'app-log',
+  templateUrl: './log.component.html',
 })
-export class LogComponent implements OnInit {
-    showModal: boolean = false;
-    constructor(private problemeService: ProblemeService) {}
-    ngOnInit() {
-        this.problemeService.sendMessageProbleme$.subscribe(() => {
-            this.showModal = true;
-        });
-    }
+export class LogComponent {
+  constructor(public logService: LogService) {}
 }

@@ -8,6 +8,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TimerComponent } from './components/timer/timer.component';
 import { PieceComponent } from './components/piece/piece.component';
+import { SignalComponent } from './components/signal/signal.component';
+import { LogComponent } from './components/log/log.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { PieceComponent } from './components/piece/piece.component';
     FooterComponent,
     NavbarComponent,
     TimerComponent,
-    PieceComponent
+    PieceComponent,
+    SignalComponent,
+    LogComponent
   ],
   imports: [
     BrowserModule,
