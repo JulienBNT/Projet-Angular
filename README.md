@@ -13,10 +13,11 @@
 
 1. Clonez ce dépôt sur votre machine locale.
 2. Exécutez la commande `npm i` pour installer les dépendances.
-3. Lancez l'application avec la commande `npm start`.
+3. Lancez l'application avec la commande `ng serve`.
 
 ## Utilisation
 
-1. Ouvrez votre navigateur et accédez à l'URL `http://localhost:3000`.
-2. Vous verrez l'application avec toutes les fonctionnalités disponibles.
+1. Ouvrez votre navigateur et accédez à l'URL `http://localhost:4200`.
+2. Démarrez le serveur en exécutant la commande `node server.js`. Cela ouvrira le serveur et vous permettra d'écrire dans le fichier JSON.
+3. Vous verrez l'application avec toutes les fonctionnalités disponibles.
 
